@@ -2,20 +2,22 @@
 
 using namespace std;
 
-int main(){
-    
-    int array[10];
-    cout<<"Enter the array of size 10:";
-    for(int i=0;i<10;i++) cin>>array[i];
-    cout<<"Enter the element to search";
-    cin>>ele;
+int LinearSearch(int arr[10], int el){
     for(int i=0;i<10;i++) {
-        if(array[i]== ele){
-            cout<<"\nElement found at "<<i+1;
-            return 0;
+        if(arr[i]== el){
+            return i+1;
         }
     }
-    cout<<"Element not found."
+    return -1;
+}
+
+int main(){
+    
+    int array[10],ele;
+    for(int i=0;i<10;i++) cin>>array[i];
+    cin>>ele;
+    int sol = LinearSearch(array,ele);
+    (sol!=-1)?cout<<"Element found at "<<sol:cout<<"Element not found.";
     return 0;
 }
 
