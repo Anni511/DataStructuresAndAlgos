@@ -5,9 +5,9 @@ def LinearSearch(n, arr, ele):
             return i+1
     return -1
 
-n = int(input())
-arr = list(map(int,input().split()))
-ele = int(input())
+n = int(input()) # Number of Elements in the Array
+arr = list(map(int,input().split()))    # Array Input
+ele = int(input())  # Element To Be Searcheds
 print("Element Found at : ", LinearSearch(n, arr,ele))
 # I/O Format
 # -1 means element was not found
